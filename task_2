@@ -1,0 +1,17 @@
+dmitryshulga@dshulga-ubuntu:~$ ls
+Desktop    Downloads         file1.txt  file3.txt  file5.txt  file7.txt  file9.txt  Pictures  temp       Videos
+Documents  examples.desktop  file2.txt  file4.txt  file6.txt  file8.txt  Music      Public    Templates
+dmitryshulga@dshulga-ubuntu:~$ cd temp
+dmitryshulga@dshulga-ubuntu:~/temp$ rm file*.txt
+dmitryshulga@dshulga-ubuntu:~/temp$ ls
+dmitryshulga@dshulga-ubuntu:~/temp$ cd
+dmitryshulga@dshulga-ubuntu:~$ mv file*.txt temp/
+dmitryshulga@dshulga-ubuntu:~$ cd temp/
+dmitryshulga@dshulga-ubuntu:~/temp$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  file5.txt  file6.txt  file7.txt  file8.txt  file9.txt
+dmitryshulga@dshulga-ubuntu:~/temp$ cd
+dmitryshulga@dshulga-ubuntu:~$ ls
+Desktop  Documents  Downloads  examples.desktop  Music  Pictures  Public  temp  Templates  Videos
+dmitryshulga@dshulga-ubuntu:~$
+
+
