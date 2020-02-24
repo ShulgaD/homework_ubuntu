@@ -230,3 +230,53 @@ lsof    2175 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-g
 lsof    2175 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
 lsof    2175 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
 
+
+
+
+dmitryshulga@dshulga-ubuntu:~$ ps aux | grep sleep
+dmitrys+  2410  0.0  0.0  14572   772 pts/1    S    14:00   0:00 sleep 100
+dmitrys+  2411  0.0  0.0  14572   744 pts/1    S    14:00   0:00 sleep 100
+dmitrys+  2412  0.0  0.0  14572   832 pts/1    S    14:00   0:00 sleep 100
+dmitrys+  2413  0.0  0.0  14572   820 pts/1    S    14:00   0:00 sleep 100
+dmitrys+  2415  0.0  0.0  21532  1036 pts/0    S+   14:00   0:00 grep --color=auto sleep
+
+
+dmitryshulga@dshulga-ubuntu:~$ ps aux | grep sleep
+dmitrys+  2447  0.0  0.0  14572   836 pts/1    S    14:06   0:00 sleep 100
+dmitrys+  2448  0.0  0.0  14572   880 pts/1    S    14:06   0:00 sleep 100
+dmitrys+  2454  0.0  0.0  14572   740 pts/1    S    14:06   0:00 sleep 100
+dmitrys+  2457  0.0  0.0  14572   744 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2458  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2459  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2460  0.0  0.0  14572   812 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2461  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2462  0.0  0.0  14572   732 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2463  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2464  0.0  0.0  14572   768 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2465  0.0  0.0  14572   780 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2466  0.0  0.0  14572   840 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2467  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2468  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2469  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2471  0.0  0.0  21532  1148 pts/0    S+   14:07   0:00 grep --color=auto sleep
+dmitryshulga@dshulga-ubuntu:~$ kill -9 2469
+dmitryshulga@dshulga-ubuntu:~$ kill -9 2469
+-bash: kill: (2469) - No such process
+dmitryshulga@dshulga-ubuntu:~$ ps aux | grep sleep
+dmitrys+  2447  0.0  0.0  14572   836 pts/1    S    14:06   0:00 sleep 100
+dmitrys+  2448  0.0  0.0  14572   880 pts/1    S    14:06   0:00 sleep 100
+dmitrys+  2454  0.0  0.0  14572   740 pts/1    S    14:06   0:00 sleep 100
+dmitrys+  2457  0.0  0.0  14572   744 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2458  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2459  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2460  0.0  0.0  14572   812 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2461  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2462  0.0  0.0  14572   732 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2463  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2464  0.0  0.0  14572   768 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2465  0.0  0.0  14572   780 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2466  0.0  0.0  14572   840 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2467  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2468  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
+dmitrys+  2473  0.0  0.0  21532  1028 pts/0    S+   14:07   0:00 grep --color=auto sleep
+dmitryshulga@dshulga-ubuntu:~$
