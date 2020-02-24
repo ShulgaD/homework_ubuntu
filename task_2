@@ -86,34 +86,86 @@ dmitryshulga@dshulga-ubuntu:~$ tree
 │       └── file15.txt
 
 
-
-
-dmitryshulga@dshulga-ubuntu:~$ ls /dev
-autofs           hugepages     mem                 shm       tty20  tty4   tty59      ttyS19  udmabuf    vcsu
-block            hwrng         memory_bandwidth    snapshot  tty21  tty40  tty6       ttyS2   uhid       vcsu1
-bsg              i2c-0         mqueue              snd       tty22  tty41  tty60      ttyS20  uinput     vcsu2
-btrfs-control    initctl       net                 sr0       tty23  tty42  tty61      ttyS21  urandom    vcsu3
-bus              input         network_latency     stderr    tty24  tty43  tty62      ttyS22  userio     vcsu4
-cdrom            kmsg          network_throughput  stdin     tty25  tty44  tty63      ttyS23  vboxguest  vcsu5
-char             lightnvm      null                stdout    tty26  tty45  tty7       ttyS24  vboxuser   vcsu6
-console          log           nvram               tty       tty27  tty46  tty8       ttyS25  vcs        vfio
-core             loop0         port                tty0      tty28  tty47  tty9       ttyS26  vcs1       vga_arbiter
-cpu_dma_latency  loop1         ppp                 tty1      tty29  tty48  ttyprintk  ttyS27  vcs2       vhci
-cuse             loop2         psaux               tty10     tty3   tty49  ttyS0      ttyS28  vcs3       vhost-net
-disk             loop3         ptmx                tty11     tty30  tty5   ttyS1      ttyS29  vcs4       vhost-vsock
-dri              loop4         pts                 tty12     tty31  tty50  ttyS10     ttyS3   vcs5       zero
-dvd              loop5         random              tty13     tty32  tty51  ttyS11     ttyS30  vcs6       zfs
-ecryptfs         loop6         rfkill              tty14     tty33  tty52  ttyS12     ttyS31  vcsa
-fb0              loop7         rtc                 tty15     tty34  tty53  ttyS13     ttyS4   vcsa1
-fd               loop8         rtc0                tty16     tty35  tty54  ttyS14     ttyS5   vcsa2
-full             loop9         sda                 tty17     tty36  tty55  ttyS15     ttyS6   vcsa3
-fuse             loop-control  sda1                tty18     tty37  tty56  ttyS16     ttyS7   vcsa4
-hidraw0          mapper        sg0                 tty19     tty38  tty57  ttyS17     ttyS8   vcsa5
-hpet             mcelog        sg1                 tty2      tty39  tty58  ttyS18     ttyS9   vcsa6
-dmitryshulga@dshulga-ubuntu:~$
-
-
-dmitryshulga@dshulga-ubuntu:~$ lsof | grep uid
-systemd   1060         dmitryshulga  mem       REG                8,1    27112     924093 /lib/x86_64-linux-gnu/libuuid.so.1.3.0
-dmitryshulga@dshulga-ubuntu:~$
+dmitryshulga@dshulga-ubuntu:~$ lsof /dev/*
+lsof: status error on /proc/2175/fd/2: No such file or directory
+lsof: status error on /proc/2175/fd/0: No such file or directory
+lsof: status error on /proc/2175/fd/1: No such file or directory
+COMMAND  PID         USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME
+systemd 1060 dmitryshulga  cwd    DIR    8,1     4096      2 /
+systemd 1060 dmitryshulga  rtd    DIR    8,1     4096      2 /
+systemd 1060 dmitryshulga  txt    REG    8,1  1612152 935245 /lib/systemd/systemd
+systemd 1060 dmitryshulga  mem    REG    8,1  1700792 923988 /lib/x86_64-linux-gnu/libm-2.27.so
+systemd 1060 dmitryshulga  mem    REG    8,1   121016 919747 /lib/x86_64-linux-gnu/libudev.so.1.6.9
+systemd 1060 dmitryshulga  mem    REG    8,1    84032 923966 /lib/x86_64-linux-gnu/libgpg-error.so.0.22.0
+systemd 1060 dmitryshulga  mem    REG    8,1    43304 923977 /lib/x86_64-linux-gnu/libjson-c.so.3.0.1
+systemd 1060 dmitryshulga  mem    REG    8,1    34872 142127 /usr/lib/x86_64-linux-gnu/libargon2.so.0
+systemd 1060 dmitryshulga  mem    REG    8,1   432640 923947 /lib/x86_64-linux-gnu/libdevmapper.so.1.02.1
+systemd 1060 dmitryshulga  mem    REG    8,1    18680 923913 /lib/x86_64-linux-gnu/libattr.so.1.1.0
+systemd 1060 dmitryshulga  mem    REG    8,1    18712 923928 /lib/x86_64-linux-gnu/libcap-ng.so.0.0.0
+systemd 1060 dmitryshulga  mem    REG    8,1    27112 924093 /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+systemd 1060 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
+systemd 1060 dmitryshulga  mem    REG    8,1   464824 924047 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+systemd 1060 dmitryshulga  mem    REG    8,1   144976 924058 /lib/x86_64-linux-gnu/libpthread-2.27.so
+systemd 1060 dmitryshulga  mem    REG    8,1   112672 142769 /usr/lib/x86_64-linux-gnu/liblz4.so.1.7.1
+systemd 1060 dmitryshulga  mem    REG    8,1   153984 923985 /lib/x86_64-linux-gnu/liblzma.so.5.2.2
+systemd 1060 dmitryshulga  mem    REG    8,1   206872 923972 /lib/x86_64-linux-gnu/libidn.so.11.6.16
+systemd 1060 dmitryshulga  mem    REG    8,1    27088 142695 /usr/lib/x86_64-linux-gnu/libip4tc.so.0.1.0
+systemd 1060 dmitryshulga  mem    REG    8,1  1159864 923964 /lib/x86_64-linux-gnu/libgcrypt.so.20.2.1
+systemd 1060 dmitryshulga  mem    REG    8,1    22768 923930 /lib/x86_64-linux-gnu/libcap.so.2.25
+systemd 1060 dmitryshulga  mem    REG    8,1   310040 923938 /lib/x86_64-linux-gnu/libcryptsetup.so.12.2.0
+systemd 1060 dmitryshulga  mem    REG    8,1    31232 923903 /lib/x86_64-linux-gnu/libacl.so.1.1.0
+systemd 1060 dmitryshulga  mem    REG    8,1    64144 923907 /lib/x86_64-linux-gnu/libapparmor.so.1.4.2
+systemd 1060 dmitryshulga  mem    REG    8,1    92208 923981 /lib/x86_64-linux-gnu/libkmod.so.2.3.2
+systemd 1060 dmitryshulga  mem    REG    8,1   124848 923915 /lib/x86_64-linux-gnu/libaudit.so.1.0.0
+systemd 1060 dmitryshulga  mem    REG    8,1    55848 924034 /lib/x86_64-linux-gnu/libpam.so.0.83.1
+systemd 1060 dmitryshulga  mem    REG    8,1   311720 923917 /lib/x86_64-linux-gnu/libblkid.so.1.1.0
+systemd 1060 dmitryshulga  mem    REG    8,1   340232 923994 /lib/x86_64-linux-gnu/libmount.so.1.1.0
+systemd 1060 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
+systemd 1060 dmitryshulga  mem    REG    8,1   288976 924069 /lib/x86_64-linux-gnu/libseccomp.so.2.4.1
+systemd 1060 dmitryshulga  mem    REG    8,1    31680 924066 /lib/x86_64-linux-gnu/librt-2.27.so
+systemd 1060 dmitryshulga  mem    REG    8,1  2367728 935096 /lib/systemd/libsystemd-shared-237.so
+systemd 1060 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
+systemd 1060 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
+systemd 1060 dmitryshulga    0r   CHR    1,3      0t0      6 /dev/null
+bash    1215 dmitryshulga  cwd    DIR    8,1     4096 262348 /home/dmitryshulga
+bash    1215 dmitryshulga  rtd    DIR    8,1     4096      2 /
+bash    1215 dmitryshulga  txt    REG    8,1  1113504 655369 /bin/bash
+bash    1215 dmitryshulga  mem    REG    8,1    47568 924015 /lib/x86_64-linux-gnu/libnss_files-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1    97176 924009 /lib/x86_64-linux-gnu/libnsl-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1    47576 924026 /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1    39744 924011 /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1 10281936 137912 /usr/lib/locale/locale-archive
+bash    1215 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1   170784 924083 /lib/x86_64-linux-gnu/libtinfo.so.5.9
+bash    1215 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
+bash    1215 dmitryshulga  mem    REG    8,1    26376 394283 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+bash    1215 dmitryshulga    0u   CHR  136,0      0t0      3 /dev/pts/0
+bash    1215 dmitryshulga    1u   CHR  136,0      0t0      3 /dev/pts/0
+bash    1215 dmitryshulga    2u   CHR  136,0      0t0      3 /dev/pts/0
+bash    1215 dmitryshulga  255u   CHR  136,0      0t0      3 /dev/pts/0
+lsof    2174 dmitryshulga  cwd    DIR    8,1     4096 262348 /home/dmitryshulga
+lsof    2174 dmitryshulga  rtd    DIR    8,1     4096      2 /
+lsof    2174 dmitryshulga  txt    REG    8,1   163224 131732 /usr/bin/lsof
+lsof    2174 dmitryshulga  mem    REG    8,1 10281936 137912 /usr/lib/locale/locale-archive
+lsof    2174 dmitryshulga  mem    REG    8,1   144976 924058 /lib/x86_64-linux-gnu/libpthread-2.27.so
+lsof    2174 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
+lsof    2174 dmitryshulga  mem    REG    8,1   464824 924047 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+lsof    2174 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
+lsof    2174 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
+lsof    2174 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
+lsof    2174 dmitryshulga  mem    REG    8,1    26376 394283 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+lsof    2174 dmitryshulga    0u   CHR  136,0      0t0      3 /dev/pts/0
+lsof    2174 dmitryshulga    1u   CHR  136,0      0t0      3 /dev/pts/0
+lsof    2174 dmitryshulga    2u   CHR  136,0      0t0      3 /dev/pts/0
+lsof    2175 dmitryshulga  cwd    DIR    8,1     4096 262348 /home/dmitryshulga
+lsof    2175 dmitryshulga  rtd    DIR    8,1     4096      2 /
+lsof    2175 dmitryshulga  txt    REG    8,1   163224 131732 /usr/bin/lsof
+lsof    2175 dmitryshulga  mem    REG    8,1 10281936 137912 /usr/lib/locale/locale-archive
+lsof    2175 dmitryshulga  mem    REG    8,1   144976 924058 /lib/x86_64-linux-gnu/libpthread-2.27.so
+lsof    2175 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
+lsof    2175 dmitryshulga  mem    REG    8,1   464824 924047 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
+lsof    2175 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
+lsof    2175 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
+lsof    2175 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
 
