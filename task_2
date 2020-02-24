@@ -85,3 +85,35 @@ dmitryshulga@dshulga-ubuntu:~$ tree
 │   └── 5
 │       └── file15.txt
 
+
+
+
+dmitryshulga@dshulga-ubuntu:~$ ls /dev
+autofs           hugepages     mem                 shm       tty20  tty4   tty59      ttyS19  udmabuf    vcsu
+block            hwrng         memory_bandwidth    snapshot  tty21  tty40  tty6       ttyS2   uhid       vcsu1
+bsg              i2c-0         mqueue              snd       tty22  tty41  tty60      ttyS20  uinput     vcsu2
+btrfs-control    initctl       net                 sr0       tty23  tty42  tty61      ttyS21  urandom    vcsu3
+bus              input         network_latency     stderr    tty24  tty43  tty62      ttyS22  userio     vcsu4
+cdrom            kmsg          network_throughput  stdin     tty25  tty44  tty63      ttyS23  vboxguest  vcsu5
+char             lightnvm      null                stdout    tty26  tty45  tty7       ttyS24  vboxuser   vcsu6
+console          log           nvram               tty       tty27  tty46  tty8       ttyS25  vcs        vfio
+core             loop0         port                tty0      tty28  tty47  tty9       ttyS26  vcs1       vga_arbiter
+cpu_dma_latency  loop1         ppp                 tty1      tty29  tty48  ttyprintk  ttyS27  vcs2       vhci
+cuse             loop2         psaux               tty10     tty3   tty49  ttyS0      ttyS28  vcs3       vhost-net
+disk             loop3         ptmx                tty11     tty30  tty5   ttyS1      ttyS29  vcs4       vhost-vsock
+dri              loop4         pts                 tty12     tty31  tty50  ttyS10     ttyS3   vcs5       zero
+dvd              loop5         random              tty13     tty32  tty51  ttyS11     ttyS30  vcs6       zfs
+ecryptfs         loop6         rfkill              tty14     tty33  tty52  ttyS12     ttyS31  vcsa
+fb0              loop7         rtc                 tty15     tty34  tty53  ttyS13     ttyS4   vcsa1
+fd               loop8         rtc0                tty16     tty35  tty54  ttyS14     ttyS5   vcsa2
+full             loop9         sda                 tty17     tty36  tty55  ttyS15     ttyS6   vcsa3
+fuse             loop-control  sda1                tty18     tty37  tty56  ttyS16     ttyS7   vcsa4
+hidraw0          mapper        sg0                 tty19     tty38  tty57  ttyS17     ttyS8   vcsa5
+hpet             mcelog        sg1                 tty2      tty39  tty58  ttyS18     ttyS9   vcsa6
+dmitryshulga@dshulga-ubuntu:~$
+
+
+dmitryshulga@dshulga-ubuntu:~$ lsof | grep uid
+systemd   1060         dmitryshulga  mem       REG                8,1    27112     924093 /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+dmitryshulga@dshulga-ubuntu:~$
+
