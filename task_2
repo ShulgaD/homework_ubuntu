@@ -53,24 +53,83 @@ dmitryshulga@dshulga-ubuntu:~/temp$
 
 
 
-dmitryshulga@dshulga-ubuntu:~$ vim scripts.sh
-dmitryshulga@dshulga-ubuntu:~$ bash scripts.sh
-dmitryshulga@dshulga-ubuntu:~$ sudo apt install tree
-dmitryshulga@dshulga-ubuntu:~$ tree
+dmitryshulga@dshulga-ubuntu:~/temp$ tree
 .
-├── 0
-│   ├── 0
-│   │   └── file00.txt
-│   ├── 1
-│   │   └── file01.txt
-│   ├── 2
-│   │   └── file02.txt
-│   ├── 3
-│   │   └── file03.txt
-│   ├── 4
-│   │   └── file04.txt
-│   └── 5
-│       └── file05.txt
+└── {1}
+    ├── 1
+    │   ├── 1
+    │   ├── 10
+    │   ├── 11
+    │   ├── 12
+    │   ├── 2
+    │   ├── 3
+    │   ├── 4
+    │   ├── 5
+    │   ├── 6
+    │   ├── 7
+    │   ├── 8
+    │   └── 9
+    ├── 2
+    │   ├── 1
+    │   ├── 10
+    │   ├── 11
+    │   ├── 12
+    │   ├── 2
+    │   ├── 3
+    │   ├── 4
+    │   ├── 5
+    │   ├── 6
+    │   ├── 7
+    │   ├── 8
+    │   └── 9
+    ├── 3
+    │   ├── 1
+    │   ├── 10
+    │   ├── 11
+    │   ├── 12
+    │   ├── 2
+    │   ├── 3
+    │   ├── 4
+    │   ├── 5
+    │   ├── 6
+    │   ├── 7
+    │   ├── 8
+    │   └── 9
+    ├── 4
+    │   ├── 1
+    │   ├── 10
+    │   ├── 11
+    │   ├── 12
+    │   ├── 2
+    │   ├── 3
+    │   ├── 4
+    │   ├── 5
+    │   ├── 6
+    │   ├── 7
+    │   ├── 8
+    │   └── 9
+    └── 5
+        ├── 1
+        ├── 10
+        ├── 11
+        ├── 12
+        ├── 2
+        ├── 3
+        ├── 4
+        ├── 5
+        ├── 6
+        ├── 7
+        ├── 8
+        └── 9
+
+66 directories, 0 files
+dmitryshulga@dshulga-ubuntu:~/temp$
+
+
+dmitryshulga@dshulga-ubuntu:~$ bash scripts.sh
+dmitryshulga@dshulga-ubuntu:~$ tree
+
+
 ├── 1
 │   ├── 0
 │   │   └── file10.txt
@@ -84,6 +143,8 @@ dmitryshulga@dshulga-ubuntu:~$ tree
 │   │   └── file14.txt
 │   └── 5
 │       └── file15.txt
+
+
 
 
 dmitryshulga@dshulga-ubuntu:~$ lsof /dev/*
