@@ -94,3 +94,17 @@ drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
 -rw----r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
 dmitryshulga@dshulga-ubuntu:~/fs$
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod 700 file1
+dmitryshulga@dshulga-ubuntu:~/fs$ la -la
+total 24
+drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rwx------  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+-rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rwx------  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$
+
+
+
