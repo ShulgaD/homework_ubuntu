@@ -108,3 +108,14 @@ dmitryshulga@dshulga-ubuntu:~/fs$
 
 
 
+dmitryshulga@dshulga-ubuntu:~/fs$ sudo su
+[sudo] password for dmitryshulga:
+root@dshulga-ubuntu:/home/dmitryshulga/fs# useradd -ou 0 -g Max
+useradd: group 'Max' does not exist
+root@dshulga-ubuntu:/home/dmitryshulga/fs# useradd -ou 0 -g 0 Max
+root@dshulga-ubuntu:/home/dmitryshulga/fs# passwd Max
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+root@dshulga-ubuntu:/home/dmitryshulga/fs#
+
