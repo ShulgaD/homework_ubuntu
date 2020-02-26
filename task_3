@@ -1,0 +1,96 @@
+Здравсткуйте!
+
+
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
+total 20
+1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 22:48 .
+ 262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+1189284 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 20:47 fele1
+1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+1189284 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 20:47 hard_fele1
+1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$
+
+
+dmitryshulga@dshulga-ubuntu:~/fs$ rm fele1
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
+total 16
+1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 22:54 .
+ 262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+1189284 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 20:47 hard_fele1
+1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$
+
+
+dmitryshulga@dshulga-ubuntu:~/fs$ ln -s file1 > soft_file1
+ln: failed to create symbolic link './file1': File exists
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
+total 20
+1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:03 .
+ 262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+1189284 -rw-rw-r--  1 dmitryshulga dmitryshulga    0 фев 24 23:03 soft_file1
+dmitryshulga@dshulga-ubuntu:~/fs$ rm soft_file1
+
+
+
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
+total 20
+1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:03 .
+ 262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+1189284 -rw-rw-r--  1 dmitryshulga dmitryshulga    0 фев 24 23:03 soft_file1
+dmitryshulga@dshulga-ubuntu:~/fs$ mkdir fs1
+dmitryshulga@dshulga-ubuntu:~/fs$ mv soft_file ./fs1
+mv: cannot stat 'soft_file': No such file or directory
+dmitryshulga@dshulga-ubuntu:~/fs$ mv soft_file1 ./fs1
+dmitryshulga@dshulga-ubuntu:~/fs$ cd fs1
+dmitryshulga@dshulga-ubuntu:~/fs/fs1$ ls -la
+total 8
+drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 ..
+-rw-rw-r-- 1 dmitryshulga dmitryshulga    0 фев 24 23:03 soft_file1
+dmitryshulga@dshulga-ubuntu:~/fs/fs1$ cd fs
+-bash: cd: fs: No such file or directory
+dmitryshulga@dshulga-ubuntu:~/fs/fs1$ cd
+dmitryshulga@dshulga-ubuntu:~$ cd fs
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
+total 24
+drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+-rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$
+
+
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod g-w file1
+dmitryshulga@dshulga-ubuntu:~/fs$ la -la
+total 24
+drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rw-r--r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+-rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rw-r--r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod g-r file1
+dmitryshulga@dshulga-ubuntu:~/fs$ la -la
+total 24
+drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rw----r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+-rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rw----r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$
