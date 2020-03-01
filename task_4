@@ -3,4 +3,6 @@
 задание 1.
 dmitryshulga@dshulga-ubuntu:~/Desktop$ sed -En 's/^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})/\1/p' task_4.txt
 
+задание 2.
+dmitryshulga@dshulga-ubuntu:~/Desktop$ sed -En '/\.png/p' task_4.txt
 
