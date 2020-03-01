@@ -1,287 +1,42 @@
-Добрый день!
-Пока не понятно как пользоваться Bash по этому просто повторил ваш пример. Точнее не  понятен  синтааксис.
-Спасибо за урок!
+Добрый вечер!
+Переделал второе задание.
 
+задание 1.
+dmitryshulga@dshulga-ubuntu:~$ ls -la /eес
+dmitryshulga@dshulga-ubuntu:~$ ls -la /proc
+dmitryshulga@dshulga-ubuntu:~$ ls -la /home
+dmitryshulga@dshulga-ubuntu:~$ ls -la /etc/adduser.conf
 
-dmitryshulga@dshulga-ubuntu:~$ ls
-Desktop    Downloads         file1.txt  file3.txt  file5.txt  file7.txt  file9.txt  Pictures  temp       Videos
-Documents  examples.desktop  file2.txt  file4.txt  file6.txt  file8.txt  Music      Public    Templates
-dmitryshulga@dshulga-ubuntu:~$ cd temp
-dmitryshulga@dshulga-ubuntu:~/temp$ rm file*.txt
-dmitryshulga@dshulga-ubuntu:~/temp$ ls
-dmitryshulga@dshulga-ubuntu:~/temp$ cd
-dmitryshulga@dshulga-ubuntu:~$ mv file*.txt temp/
-dmitryshulga@dshulga-ubuntu:~$ cd temp/
-dmitryshulga@dshulga-ubuntu:~/temp$ ls
-file1.txt  file2.txt  file3.txt  file4.txt  file5.txt  file6.txt  file7.txt  file8.txt  file9.txt
-dmitryshulga@dshulga-ubuntu:~/temp$ cd
-dmitryshulga@dshulga-ubuntu:~$ ls
-Desktop  Documents  Downloads  examples.desktop  Music  Pictures  Public  temp  Templates  Videos
-dmitryshulga@dshulga-ubuntu:~$
+задание 2.
+dmitryshulga@dshulga-ubuntu:~/fs$ cat > file3.txt
+Привет!
+dmitryshulga@dshulga-ubuntu:~/fs$ cat > file4.txt
+Как дела?
+dmitryshulga@dshulga-ubuntu:~/fs$ cat file3.txt file4.txt > file5.txt
+dmitryshulga@dshulga-ubuntu:~/fs$ cat file5.txt
+Привет!
+Как дела?
+dmitryshulga@dshulga-ubuntu:~/fs$
 
+задание 3.
+dmitryshulga@dshulga-ubuntu:~/fs$ echo "строка" > file6.txt
+dmitryshulga@dshulga-ubuntu:~/fs$ mkdir fs1
+dmitryshulga@dshulga-ubuntu:~/fs$ mv file3.txt file4.txt file5.txt file6.txt fs1/
+dmitryshulga@dshulga-ubuntu:~/fs$ rm -Rfv fs1
 
-dmitryshulga@dshulga-ubuntu:~/temp$ cat *.txt
-efsfd
-sdf
-sdf
-sdfsdfs
-dfsdf
-sdf
-sdf-w
+задание 4.
+dmitryshulga@dshulga-ubuntu:~/fs$ find ~/ maxdepth 1 -name ".*"
 
-_W
--w
+Задание 5.
+dmitryshulga@dshulga-ubuntu:~$ find /etc/ > 1.txt 2>fail.txt
+dmitryshulga@dshulga-ubuntu:~$ cat fail.txt
 
-jm
-sdfg
-sdrg
-
-dfg
-dfb
-d
-fb
-df
-bd
-fb
-dfb
-:w
-
-dsg
-dfg
-df
-gd
-fg
-dfg
-df
-g
-dmitryshulga@dshulga-ubuntu:~/temp$
+задание 6.
+dmitryshulga@dshulga-ubuntu:~$ ps aux | grep firefox
+dmitrys+  3364 20.2 12.7 2878216 260428 tty2   Sl+  21:04   0:06 /usr/lib/firefox/firefox -new-window
+dmitryshulga@dshulga-ubuntu:~$ kill 3364
+dmitryshulga@dshulga-ubuntu:~$ ps aux | grep firefox
+dmitrys+  3568  0.0  0.0  21532  1048 pts/0    S+   21:09   0:00 grep --color=auto firefox
 
 
 
-dmitryshulga@dshulga-ubuntu:~/temp$ tree
-.
-└── {1}
-    ├── 1
-    │   ├── 1
-    │   ├── 10
-    │   ├── 11
-    │   ├── 12
-    │   ├── 2
-    │   ├── 3
-    │   ├── 4
-    │   ├── 5
-    │   ├── 6
-    │   ├── 7
-    │   ├── 8
-    │   └── 9
-    ├── 2
-    │   ├── 1
-    │   ├── 10
-    │   ├── 11
-    │   ├── 12
-    │   ├── 2
-    │   ├── 3
-    │   ├── 4
-    │   ├── 5
-    │   ├── 6
-    │   ├── 7
-    │   ├── 8
-    │   └── 9
-    ├── 3
-    │   ├── 1
-    │   ├── 10
-    │   ├── 11
-    │   ├── 12
-    │   ├── 2
-    │   ├── 3
-    │   ├── 4
-    │   ├── 5
-    │   ├── 6
-    │   ├── 7
-    │   ├── 8
-    │   └── 9
-    ├── 4
-    │   ├── 1
-    │   ├── 10
-    │   ├── 11
-    │   ├── 12
-    │   ├── 2
-    │   ├── 3
-    │   ├── 4
-    │   ├── 5
-    │   ├── 6
-    │   ├── 7
-    │   ├── 8
-    │   └── 9
-    └── 5
-        ├── 1
-        ├── 10
-        ├── 11
-        ├── 12
-        ├── 2
-        ├── 3
-        ├── 4
-        ├── 5
-        ├── 6
-        ├── 7
-        ├── 8
-        └── 9
-
-66 directories, 0 files
-dmitryshulga@dshulga-ubuntu:~/temp$
-
-
-dmitryshulga@dshulga-ubuntu:~$ bash scripts.sh
-dmitryshulga@dshulga-ubuntu:~$ tree
-
-
-├── 1
-│   ├── 0
-│   │   └── file10.txt
-│   ├── 1
-│   │   └── file11.txt
-│   ├── 2
-│   │   └── file12.txt
-│   ├── 3
-│   │   └── file13.txt
-│   ├── 4
-│   │   └── file14.txt
-│   └── 5
-│       └── file15.txt
-
-
-
-
-dmitryshulga@dshulga-ubuntu:~$ lsof /dev/*
-lsof: status error on /proc/2175/fd/2: No such file or directory
-lsof: status error on /proc/2175/fd/0: No such file or directory
-lsof: status error on /proc/2175/fd/1: No such file or directory
-COMMAND  PID         USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME
-systemd 1060 dmitryshulga  cwd    DIR    8,1     4096      2 /
-systemd 1060 dmitryshulga  rtd    DIR    8,1     4096      2 /
-systemd 1060 dmitryshulga  txt    REG    8,1  1612152 935245 /lib/systemd/systemd
-systemd 1060 dmitryshulga  mem    REG    8,1  1700792 923988 /lib/x86_64-linux-gnu/libm-2.27.so
-systemd 1060 dmitryshulga  mem    REG    8,1   121016 919747 /lib/x86_64-linux-gnu/libudev.so.1.6.9
-systemd 1060 dmitryshulga  mem    REG    8,1    84032 923966 /lib/x86_64-linux-gnu/libgpg-error.so.0.22.0
-systemd 1060 dmitryshulga  mem    REG    8,1    43304 923977 /lib/x86_64-linux-gnu/libjson-c.so.3.0.1
-systemd 1060 dmitryshulga  mem    REG    8,1    34872 142127 /usr/lib/x86_64-linux-gnu/libargon2.so.0
-systemd 1060 dmitryshulga  mem    REG    8,1   432640 923947 /lib/x86_64-linux-gnu/libdevmapper.so.1.02.1
-systemd 1060 dmitryshulga  mem    REG    8,1    18680 923913 /lib/x86_64-linux-gnu/libattr.so.1.1.0
-systemd 1060 dmitryshulga  mem    REG    8,1    18712 923928 /lib/x86_64-linux-gnu/libcap-ng.so.0.0.0
-systemd 1060 dmitryshulga  mem    REG    8,1    27112 924093 /lib/x86_64-linux-gnu/libuuid.so.1.3.0
-systemd 1060 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
-systemd 1060 dmitryshulga  mem    REG    8,1   464824 924047 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
-systemd 1060 dmitryshulga  mem    REG    8,1   144976 924058 /lib/x86_64-linux-gnu/libpthread-2.27.so
-systemd 1060 dmitryshulga  mem    REG    8,1   112672 142769 /usr/lib/x86_64-linux-gnu/liblz4.so.1.7.1
-systemd 1060 dmitryshulga  mem    REG    8,1   153984 923985 /lib/x86_64-linux-gnu/liblzma.so.5.2.2
-systemd 1060 dmitryshulga  mem    REG    8,1   206872 923972 /lib/x86_64-linux-gnu/libidn.so.11.6.16
-systemd 1060 dmitryshulga  mem    REG    8,1    27088 142695 /usr/lib/x86_64-linux-gnu/libip4tc.so.0.1.0
-systemd 1060 dmitryshulga  mem    REG    8,1  1159864 923964 /lib/x86_64-linux-gnu/libgcrypt.so.20.2.1
-systemd 1060 dmitryshulga  mem    REG    8,1    22768 923930 /lib/x86_64-linux-gnu/libcap.so.2.25
-systemd 1060 dmitryshulga  mem    REG    8,1   310040 923938 /lib/x86_64-linux-gnu/libcryptsetup.so.12.2.0
-systemd 1060 dmitryshulga  mem    REG    8,1    31232 923903 /lib/x86_64-linux-gnu/libacl.so.1.1.0
-systemd 1060 dmitryshulga  mem    REG    8,1    64144 923907 /lib/x86_64-linux-gnu/libapparmor.so.1.4.2
-systemd 1060 dmitryshulga  mem    REG    8,1    92208 923981 /lib/x86_64-linux-gnu/libkmod.so.2.3.2
-systemd 1060 dmitryshulga  mem    REG    8,1   124848 923915 /lib/x86_64-linux-gnu/libaudit.so.1.0.0
-systemd 1060 dmitryshulga  mem    REG    8,1    55848 924034 /lib/x86_64-linux-gnu/libpam.so.0.83.1
-systemd 1060 dmitryshulga  mem    REG    8,1   311720 923917 /lib/x86_64-linux-gnu/libblkid.so.1.1.0
-systemd 1060 dmitryshulga  mem    REG    8,1   340232 923994 /lib/x86_64-linux-gnu/libmount.so.1.1.0
-systemd 1060 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
-systemd 1060 dmitryshulga  mem    REG    8,1   288976 924069 /lib/x86_64-linux-gnu/libseccomp.so.2.4.1
-systemd 1060 dmitryshulga  mem    REG    8,1    31680 924066 /lib/x86_64-linux-gnu/librt-2.27.so
-systemd 1060 dmitryshulga  mem    REG    8,1  2367728 935096 /lib/systemd/libsystemd-shared-237.so
-systemd 1060 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
-systemd 1060 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
-systemd 1060 dmitryshulga    0r   CHR    1,3      0t0      6 /dev/null
-bash    1215 dmitryshulga  cwd    DIR    8,1     4096 262348 /home/dmitryshulga
-bash    1215 dmitryshulga  rtd    DIR    8,1     4096      2 /
-bash    1215 dmitryshulga  txt    REG    8,1  1113504 655369 /bin/bash
-bash    1215 dmitryshulga  mem    REG    8,1    47568 924015 /lib/x86_64-linux-gnu/libnss_files-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1    97176 924009 /lib/x86_64-linux-gnu/libnsl-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1    47576 924026 /lib/x86_64-linux-gnu/libnss_nis-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1    39744 924011 /lib/x86_64-linux-gnu/libnss_compat-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1 10281936 137912 /usr/lib/locale/locale-archive
-bash    1215 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1   170784 924083 /lib/x86_64-linux-gnu/libtinfo.so.5.9
-bash    1215 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
-bash    1215 dmitryshulga  mem    REG    8,1    26376 394283 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
-bash    1215 dmitryshulga    0u   CHR  136,0      0t0      3 /dev/pts/0
-bash    1215 dmitryshulga    1u   CHR  136,0      0t0      3 /dev/pts/0
-bash    1215 dmitryshulga    2u   CHR  136,0      0t0      3 /dev/pts/0
-bash    1215 dmitryshulga  255u   CHR  136,0      0t0      3 /dev/pts/0
-lsof    2174 dmitryshulga  cwd    DIR    8,1     4096 262348 /home/dmitryshulga
-lsof    2174 dmitryshulga  rtd    DIR    8,1     4096      2 /
-lsof    2174 dmitryshulga  txt    REG    8,1   163224 131732 /usr/bin/lsof
-lsof    2174 dmitryshulga  mem    REG    8,1 10281936 137912 /usr/lib/locale/locale-archive
-lsof    2174 dmitryshulga  mem    REG    8,1   144976 924058 /lib/x86_64-linux-gnu/libpthread-2.27.so
-lsof    2174 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
-lsof    2174 dmitryshulga  mem    REG    8,1   464824 924047 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
-lsof    2174 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
-lsof    2174 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
-lsof    2174 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
-lsof    2174 dmitryshulga  mem    REG    8,1    26376 394283 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
-lsof    2174 dmitryshulga    0u   CHR  136,0      0t0      3 /dev/pts/0
-lsof    2174 dmitryshulga    1u   CHR  136,0      0t0      3 /dev/pts/0
-lsof    2174 dmitryshulga    2u   CHR  136,0      0t0      3 /dev/pts/0
-lsof    2175 dmitryshulga  cwd    DIR    8,1     4096 262348 /home/dmitryshulga
-lsof    2175 dmitryshulga  rtd    DIR    8,1     4096      2 /
-lsof    2175 dmitryshulga  txt    REG    8,1   163224 131732 /usr/bin/lsof
-lsof    2175 dmitryshulga  mem    REG    8,1 10281936 137912 /usr/lib/locale/locale-archive
-lsof    2175 dmitryshulga  mem    REG    8,1   144976 924058 /lib/x86_64-linux-gnu/libpthread-2.27.so
-lsof    2175 dmitryshulga  mem    REG    8,1    14560 923948 /lib/x86_64-linux-gnu/libdl-2.27.so
-lsof    2175 dmitryshulga  mem    REG    8,1   464824 924047 /lib/x86_64-linux-gnu/libpcre.so.3.13.3
-lsof    2175 dmitryshulga  mem    REG    8,1  2030544 923925 /lib/x86_64-linux-gnu/libc-2.27.so
-lsof    2175 dmitryshulga  mem    REG    8,1   154832 924070 /lib/x86_64-linux-gnu/libselinux.so.1
-lsof    2175 dmitryshulga  mem    REG    8,1   170960 923897 /lib/x86_64-linux-gnu/ld-2.27.so
-
-
-
-
-dmitryshulga@dshulga-ubuntu:~$ ps aux | grep sleep
-dmitrys+  2410  0.0  0.0  14572   772 pts/1    S    14:00   0:00 sleep 100
-dmitrys+  2411  0.0  0.0  14572   744 pts/1    S    14:00   0:00 sleep 100
-dmitrys+  2412  0.0  0.0  14572   832 pts/1    S    14:00   0:00 sleep 100
-dmitrys+  2413  0.0  0.0  14572   820 pts/1    S    14:00   0:00 sleep 100
-dmitrys+  2415  0.0  0.0  21532  1036 pts/0    S+   14:00   0:00 grep --color=auto sleep
-
-
-dmitryshulga@dshulga-ubuntu:~$ ps aux | grep sleep
-dmitrys+  2447  0.0  0.0  14572   836 pts/1    S    14:06   0:00 sleep 100
-dmitrys+  2448  0.0  0.0  14572   880 pts/1    S    14:06   0:00 sleep 100
-dmitrys+  2454  0.0  0.0  14572   740 pts/1    S    14:06   0:00 sleep 100
-dmitrys+  2457  0.0  0.0  14572   744 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2458  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2459  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2460  0.0  0.0  14572   812 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2461  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2462  0.0  0.0  14572   732 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2463  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2464  0.0  0.0  14572   768 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2465  0.0  0.0  14572   780 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2466  0.0  0.0  14572   840 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2467  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2468  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2469  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2471  0.0  0.0  21532  1148 pts/0    S+   14:07   0:00 grep --color=auto sleep
-dmitryshulga@dshulga-ubuntu:~$ kill -9 2469
-dmitryshulga@dshulga-ubuntu:~$ kill -9 2469
--bash: kill: (2469) - No such process
-dmitryshulga@dshulga-ubuntu:~$ ps aux | grep sleep
-dmitrys+  2447  0.0  0.0  14572   836 pts/1    S    14:06   0:00 sleep 100
-dmitrys+  2448  0.0  0.0  14572   880 pts/1    S    14:06   0:00 sleep 100
-dmitrys+  2454  0.0  0.0  14572   740 pts/1    S    14:06   0:00 sleep 100
-dmitrys+  2457  0.0  0.0  14572   744 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2458  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2459  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2460  0.0  0.0  14572   812 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2461  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2462  0.0  0.0  14572   732 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2463  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2464  0.0  0.0  14572   768 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2465  0.0  0.0  14572   780 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2466  0.0  0.0  14572   840 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2467  0.0  0.0  14572   764 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2468  0.0  0.0  14572   820 pts/1    S    14:07   0:00 sleep 100
-dmitrys+  2473  0.0  0.0  21532  1028 pts/0    S+   14:07   0:00 grep --color=auto sleep
-dmitryshulga@dshulga-ubuntu:~$
