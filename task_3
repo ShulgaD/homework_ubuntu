@@ -119,3 +119,51 @@ Retype new UNIX password:
 passwd: password updated successfully
 root@dshulga-ubuntu:/home/dmitryshulga/fs#
 
+
+
+Исправления по 3 заданию.
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
+total 24
+drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rwx------ 2 dmitryshulga dmitryshulga 6 фев 24 22:56 file1
+-rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
+drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rwx------ 2 dmitryshulga dmitryshulga 6 фев 24 22:56 hard_fele1
+lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
+
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod u+r file2
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
+total 24
+drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 file1
+-rw------- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
+drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 hard_fele1
+lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$ ^C
+dmitryshulga@dshulga-ubuntu:~/fs$
+
+
+Исправления по 4 заданию.
+Так, с правами доступа у меня получилось!
+
+weezy@dshulga-ubuntu:~$ cat /etc/group | grep sudo
+sudo:x:27:dmitryshulga
+weezy@dshulga-ubuntu:~$ usermod -aG sudo weezy
+usermod: Permission denied.
+usermod: cannot lock /etc/passwd; try again later.
+weezy@dshulga-ubuntu:~$ exit
+logout
+root@dshulga-ubuntu:/home/dmitryshulga# usermod -aG sudo weezy
+root@dshulga-ubuntu:/home/dmitryshulga# id weezy
+uid=1001(weezy) gid=7777(weezy) groups=7777(weezy),27(sudo)
+root@dshulga-ubuntu:/home/dmitryshulga# su - weezy
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+weezy@dshulga-ubuntu:~$ sudo su
+[sudo] password for weezy:
+root@dshulga-ubuntu:/opt/weezy#
+
