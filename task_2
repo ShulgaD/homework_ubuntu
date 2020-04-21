@@ -1,28 +1,53 @@
 Добрый вечер!
-Переделал второе задание.
 
 задание 1.
-dmitryshulga@dshulga-ubuntu:~$ ls -la /eес
-dmitryshulga@dshulga-ubuntu:~$ ls -la /proc
-dmitryshulga@dshulga-ubuntu:~$ ls -la /home
-dmitryshulga@dshulga-ubuntu:~$ ls -la /etc/adduser.conf
+dmitryshulga@dshulga-ubuntu:~$ ls-la /etc
+dmitryshulga@dshulga-ubuntu:~$ ls-la /proc
+dmitryshulga@dshulga-ubuntu:~$ ls-la / home
+dmitryshulga@dshulga-ubuntu:~$ ls-la / etc / adduser.conf
 
 задание 2.
-dmitryshulga@dshulga-ubuntu:~/fs$ cat > file3.txt
+dmitryshulga@dshulga-ubuntu:~$ mkdir test
+dmitryshulga@dshulga-ubuntu:~$ cd test
+dmitryshulga@dshulga-ubuntu:~/test$ cat > file.txt
 Привет!
-dmitryshulga@dshulga-ubuntu:~/fs$ cat > file4.txt
+dmitryshulga@dshulga-ubuntu:~/test$ cat > file1.txt
 Как дела?
-dmitryshulga@dshulga-ubuntu:~/fs$ cat file3.txt file4.txt > file5.txt
-dmitryshulga@dshulga-ubuntu:~/fs$ cat file5.txt
+dmitryshulga@dshulga-ubuntu:~/test$ cat file.txt file1.txt > file2.txt
+dmitryshulga@dshulga-ubuntu:~/test$ cat file2.txt
 Привет!
 Как дела?
-dmitryshulga@dshulga-ubuntu:~/fs$
+dmitryshulga@dshulga-ubuntu:~/test$ mv file2.txt file3.txt
+dmitryshulga@dshulga-ubuntu:~/test$ ls
+file1.txt  file3.txt  file.txt
 
 задание 3.
-dmitryshulga@dshulga-ubuntu:~/fs$ echo "строка" > file6.txt
-dmitryshulga@dshulga-ubuntu:~/fs$ mkdir fs1
-dmitryshulga@dshulga-ubuntu:~/fs$ mv file3.txt file4.txt file5.txt file6.txt fs1/
-dmitryshulga@dshulga-ubuntu:~/fs$ rm -Rfv fs1
+dmitryshulga@dshulga-ubuntu:~/test$ mkdir test1
+dmitryshulga@dshulga-ubuntu:~/test$ ls -la
+total 28
+drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 апр 21 17:22 .
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:03 ..
+-rw-rw-r--  1 dmitryshulga dmitryshulga   17 апр 21 17:07 file1.txt
+-rw-rw-r--  1 dmitryshulga dmitryshulga   32 апр 21 17:08 file3.txt
+-rw-rw-r--  1 dmitryshulga dmitryshulga   13 апр 21 17:20 file4.txt
+-rw-rw-r--  1 dmitryshulga dmitryshulga   15 апр 21 17:07 file.txt
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 апр 21 17:22 test1
+dmitryshulga@dshulga-ubuntu:~/test$ mv file.txt file1.txt file3.txt file4.txt test1/
+dmitryshulga@dshulga-ubuntu:~/test$ ls -la
+total 12
+drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 апр 21 17:24 .
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:03 ..
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 апр 21 17:24 test1
+dmitryshulga@dshulga-ubuntu:~/test$ rm -Rfv test1
+removed 'test1/file4.txt'
+removed 'test1/file1.txt'
+removed 'test1/file.txt'
+removed 'test1/file3.txt'
+removed directory 'test1'
+dmitryshulga@dshulga-ubuntu:~/test$ ls -la
+total 8
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 апр 21 17:25 .
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:03 ..
 
 задание 4.
 dmitryshulga@dshulga-ubuntu:~/fs$ find ~/ maxdepth 1 -name ".*"
@@ -32,11 +57,26 @@ dmitryshulga@dshulga-ubuntu:~$ find /etc/ > 1.txt 2>fail.txt
 dmitryshulga@dshulga-ubuntu:~$ cat fail.txt
 
 задание 6.
-dmitryshulga@dshulga-ubuntu:~$ ps aux | grep firefox
-dmitrys+  3364 20.2 12.7 2878216 260428 tty2   Sl+  21:04   0:06 /usr/lib/firefox/firefox -new-window
-dmitryshulga@dshulga-ubuntu:~$ kill 3364
-dmitryshulga@dshulga-ubuntu:~$ ps aux | grep firefox
-dmitrys+  3568  0.0  0.0  21532  1048 pts/0    S+   21:09   0:00 grep --color=auto firefox
+На первом терминале:
+dmitryshulga@dshulga-ubuntu:~$ cat
+Terminated
+dmitryshulga@dshulga-ubuntu:~$ cat
+Terminated
 
-
-
+На втором терминале:
+dmitryshulga@dshulga-ubuntu:~$ ps afx | grep cat
+ 2986 pts/0    S+     0:00  |           \_ cat
+ 2988 pts/1    S+     0:00              \_ grep --color=auto cat
+ 1210 tty1     Sl+    0:00  |           \_ /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ 2350 tty2     Sl+    0:00              \_ /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ 2861 tty2     SLl+   0:09              \_ /usr/bin/gnome-software --gapplication-service
+dmitryshulga@dshulga-ubuntu:~$ kill 2986
+dmitryshulga@dshulga-ubuntu:~$ ps afx | grep cat
+ 2996 pts/0    S+     0:00  |           \_ cat
+ 2998 pts/1    S+     0:00              \_ grep --color=auto cat
+ 1210 tty1     Sl+    0:00  |           \_ /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ 2350 tty2     Sl+    0:00              \_ /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ 2861 tty2     SLl+   0:09              \_ /usr/bin/gnome-software --gapplication-service
+dmitryshulga@dshulga-ubuntu:~$ kill -s 15 2986
+-bash: kill: (2986) - No such process
+dmitryshulga@dshulga-ubuntu:~$ kill -s 15 2996
