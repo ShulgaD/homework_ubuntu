@@ -1,52 +1,40 @@
 Здравсткуйте!
 
+Задание 1 2.
 
 dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
 total 20
-1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 22:48 .
+1189283 drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 22:48 .
  262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
-1189284 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 20:47 fele1
-1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-1189284 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 20:47 hard_fele1
-1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+1189284 -rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 20:47 fele1
+1189286 -rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
+1189284 -rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 20:47 hard_fele1
+1189285 lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
 dmitryshulga@dshulga-ubuntu:~/fs$
-
 
 dmitryshulga@dshulga-ubuntu:~/fs$ rm fele1
 dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
 total 16
-1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 22:54 .
+1189283 drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 22:54 .
  262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
-1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-1189284 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 20:47 hard_fele1
-1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+1189286 -rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
+1189284 -rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 20:47 hard_fele1
+1189285 lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
 dmitryshulga@dshulga-ubuntu:~/fs$
-
 
 dmitryshulga@dshulga-ubuntu:~/fs$ ln -s file1 > soft_file1
 ln: failed to create symbolic link './file1': File exists
 dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
 total 20
-1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:03 .
+1189283 drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:03 .
  262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
-1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
-1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
-1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
-1189284 -rw-rw-r--  1 dmitryshulga dmitryshulga    0 фев 24 23:03 soft_file1
+1189287 -rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 file1
+1189286 -rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
+1189287 -rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 hard_fele1
+1189285 lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
+1189284 -rw-rw-r-- 1 dmitryshulga dmitryshulga 0 фев 24 23:03 soft_file1
 dmitryshulga@dshulga-ubuntu:~/fs$ rm soft_file1
 
-
-
-dmitryshulga@dshulga-ubuntu:~/fs$ ls -lai
-total 20
-1189283 drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:03 .
- 262348 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
-1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
-1189286 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-1189287 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
-1189285 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
-1189284 -rw-rw-r--  1 dmitryshulga dmitryshulga    0 фев 24 23:03 soft_file1
 dmitryshulga@dshulga-ubuntu:~/fs$ mkdir fs1
 dmitryshulga@dshulga-ubuntu:~/fs$ mv soft_file ./fs1
 mv: cannot stat 'soft_file': No such file or directory
@@ -56,114 +44,81 @@ dmitryshulga@dshulga-ubuntu:~/fs/fs1$ ls -la
 total 8
 drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
 drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 ..
--rw-rw-r-- 1 dmitryshulga dmitryshulga    0 фев 24 23:03 soft_file1
+-rw-rw-r-- 1 dmitryshulga dmitryshulga 0 фев 24 23:03 soft_file1
 dmitryshulga@dshulga-ubuntu:~/fs/fs1$ cd fs
 -bash: cd: fs: No such file or directory
 dmitryshulga@dshulga-ubuntu:~/fs/fs1$ cd
 dmitryshulga@dshulga-ubuntu:~$ cd fs
 dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
 total 24
-drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
+drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
 drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
+-rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 file1
+-rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
+drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 hard_fele1
+lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$
+
+
+Задание 3.
+
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
+total 20
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 мар  1 20:08 .
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:34 ..
 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+-rw-------  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
+-rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod u=rw,g=rw,o=r file2
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod u=rw,g=,o= file1
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
+total 20
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 мар  1 20:08 .
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:34 ..
+-rw-------  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
 -rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
+-rw-------  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
+lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod 664 file1
+dmitryshulga@dshulga-ubuntu:~/fs$ chmod 600 file2
+dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
+total 20
+drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 мар  1 20:08 .
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:34 ..
+-rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
+-rw-------  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
 -rw-rw-r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
 lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
 dmitryshulga@dshulga-ubuntu:~/fs$
 
+Задание 4.
 
-dmitryshulga@dshulga-ubuntu:~/fs$ chmod g-w file1
-dmitryshulga@dshulga-ubuntu:~/fs$ la -la
-total 24
-drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
-drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
--rw-r--r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
--rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
--rw-r--r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
-lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
-dmitryshulga@dshulga-ubuntu:~/fs$ chmod g-r file1
-dmitryshulga@dshulga-ubuntu:~/fs$ la -la
-total 24
-drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
-drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
--rw----r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
--rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
--rw----r--  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
-lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
-dmitryshulga@dshulga-ubuntu:~/fs$
-dmitryshulga@dshulga-ubuntu:~/fs$ chmod 700 file1
-dmitryshulga@dshulga-ubuntu:~/fs$ la -la
-total 24
-drwxrwxr-x  3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
-drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
--rwx------  2 dmitryshulga dmitryshulga    6 фев 24 22:56 file1
--rw-rw-r--  1 dmitryshulga dmitryshulga    6 фев 24 22:48 file2
-drwxrwxr-x  2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
--rwx------  2 dmitryshulga dmitryshulga    6 фев 24 22:56 hard_fele1
-lrwxrwxrwx  1 dmitryshulga dmitryshulga    5 фев 24 20:52 soft_fele1 -> fele1
-dmitryshulga@dshulga-ubuntu:~/fs$
+dmitryshulga:x:1000:
+sambashare:x:126:dmitryshulga
+vboxsf:x:999:
+weezy:x:7777:
+developer:x:7778:
+dmitryshulga@dshulga-ubuntu:~$ sudo useradd -m -G developer -s /bin/bash Mark
+dmitryshulga@dshulga-ubuntu:~$ ls -l /home
+total 8
+drwxr-xr-x 20 dmitryshulga dmitryshulga 4096 апр 21 17:34 dmitryshulga
+drwxr-xr-x  2 Mark         Mark         4096 апр 26 20:22 Mark
+dmitryshulga@dshulga-ubuntu:~$ id Mark
+uid=1002(Mark) gid=1002(Mark) groups=1002(Mark),7778(developer)
+dmitryshulga@dshulga-ubuntu:~$ sudo su
+root@dshulga-ubuntu:/home/dmitryshulga# usermod -aG sudo Mark
+root@dshulga-ubuntu:/home/dmitryshulga# id Mark
+uid=1002(Mark) gid=1002(Mark) groups=1002(Mark),27(sudo),7778(developer)
+root@dshulga-ubuntu:/home/dmitryshulga# exit
+exit
 
-
-
-dmitryshulga@dshulga-ubuntu:~/fs$ sudo su
-[sudo] password for dmitryshulga:
-root@dshulga-ubuntu:/home/dmitryshulga/fs# useradd -ou 0 -g Max
-useradd: group 'Max' does not exist
-root@dshulga-ubuntu:/home/dmitryshulga/fs# useradd -ou 0 -g 0 Max
-root@dshulga-ubuntu:/home/dmitryshulga/fs# passwd Max
-Enter new UNIX password:
-Retype new UNIX password:
-passwd: password updated successfully
-root@dshulga-ubuntu:/home/dmitryshulga/fs#
-
-
-
-Исправления по 3 заданию.
-dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
-total 24
-drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
-drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
--rwx------ 2 dmitryshulga dmitryshulga 6 фев 24 22:56 file1
--rw-rw-r-- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
-drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
--rwx------ 2 dmitryshulga dmitryshulga 6 фев 24 22:56 hard_fele1
-lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
-
-dmitryshulga@dshulga-ubuntu:~/fs$ chmod u+r file2
-dmitryshulga@dshulga-ubuntu:~/fs$ ls -la
-total 24
-drwxrwxr-x 3 dmitryshulga dmitryshulga 4096 фев 24 23:08 .
-drwxr-xr-x 18 dmitryshulga dmitryshulga 4096 фев 24 20:46 ..
--rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 file1
--rw------- 1 dmitryshulga dmitryshulga 6 фев 24 22:48 file2
-drwxrwxr-x 2 dmitryshulga dmitryshulga 4096 фев 24 23:08 fs1
--rw-rw-r-- 2 dmitryshulga dmitryshulga 6 фев 24 22:56 hard_fele1
-lrwxrwxrwx 1 dmitryshulga dmitryshulga 5 фев 24 20:52 soft_fele1 -> fele1
-dmitryshulga@dshulga-ubuntu:~/fs$ ^C
-dmitryshulga@dshulga-ubuntu:~/fs$
-
-
-Исправления по 4 заданию.
-Так, с правами доступа у меня получилось!
-
-weezy@dshulga-ubuntu:~$ cat /etc/group | grep sudo
-sudo:x:27:dmitryshulga
-weezy@dshulga-ubuntu:~$ usermod -aG sudo weezy
-usermod: Permission denied.
-usermod: cannot lock /etc/passwd; try again later.
-weezy@dshulga-ubuntu:~$ exit
-logout
-root@dshulga-ubuntu:/home/dmitryshulga# usermod -aG sudo weezy
-root@dshulga-ubuntu:/home/dmitryshulga# id weezy
-uid=1001(weezy) gid=7777(weezy) groups=7777(weezy),27(sudo)
-root@dshulga-ubuntu:/home/dmitryshulga# su - weezy
+dmitryshulga@dshulga-ubuntu:~$ su -l Mark
+Password:
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
-weezy@dshulga-ubuntu:~$ sudo su
-[sudo] password for weezy:
-root@dshulga-ubuntu:/opt/weezy#
-
+Mark@dshulga-ubuntu:~$ sudo su
+[sudo] password for Mark:
+root@dshulga-ubuntu:/home/Mark#
